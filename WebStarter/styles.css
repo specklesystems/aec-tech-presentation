@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#viewerParent {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#viewer {
+  min-width: 100vw;
+  min-height: 80vh;
+  border: 1px solid black;
+}
