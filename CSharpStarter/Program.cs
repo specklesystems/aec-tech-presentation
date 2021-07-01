@@ -26,6 +26,15 @@ namespace CSharpStarter
             commitObj["myProp"] = "myPropValue";
             commitObj["myOtherProp"] = new List<string> { "A", "list", "of", "values" };
 
+            var boxes = new List<Point>();
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    boxes.Add(new Point(i, j, 0));
+                }
+            }
+            commitObj["boxes"] = boxes;
             // Send the object to Speckle, get back the commit id
             var commitId = Helpers.Send("2d9b814ed6", commitObj, "Upload from my console app", null, 0, defaultAccount, false).Result;
 
