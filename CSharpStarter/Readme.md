@@ -1,12 +1,4 @@
-# Using Speckle Core
+# AEC C# Starter
 
-```
-dotnet new console -f netcoreapp3.1
-```
 
-Add Speckle.Core
-
-```
-dotnet add package Speckle.Core --version 2.1.22
-```
-
+>

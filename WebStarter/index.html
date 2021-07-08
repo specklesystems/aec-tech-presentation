@@ -7,14 +7,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speckle Web Starter</title>
   <script src="https://unpkg.com/@speckle/viewer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/w-jsonview-tree@1.0.24/dist/w-jsonview-tree.umd.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div id="viewerParent">
-    <div id="viewer"></div>
-  </div>
-  <script src="app.js"></script>
+  <div id="viewerParent" class="hero is-fullheight">
+    <div id="viewer" class=""></div>
+    <div class="box" id="menu">
+      <div class="content">
+        <h3 class="title has-text-info">Speckle - AEC Tech Demo</h3>
+        <p class="subtitle is-size-7">Compare different design options on a stream</p>
+        <div class="field has-addons">
+          <div class="control">
+            <input id="stream-input" class="input" type="text" placeholder="Your stream ID">
+          </div>
+          <div class="control">
+            <input id="token-input" class="input" type="text" placeholder="Your auth token">
+          </div>
+          <div class="control">
+            <button class="button is-info" id="reloadButton">Load</button>
+          </div>
+        </div>
+        <div class="field has-addons">
+          <div class="control">
+            <button class="button is-info" disabled>Beam options</button>
+          </div>
+          <div class="control is-expanded">
+            <div class="select is-fullwidth">
+              <select id="alternative-selector" class="is-loading">
+                <option selected>Select a beam option</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field has-addons">
+          <div class="control">
+            <button class="button is-info" disabled>Column options</button>
+          </div>
+          <div class="control is-expanded">
+            <span class="select is-fullwidth">
+              <select id="alternative-selector-2" class="is-loading">
+                <option selected>Select a column option</option>
+              </select>
+            </span>
+          </div>
+        </div>
+        <button id="take-screenshot" class="button is-fullwidth is-info is-small">Take screenshot</button>
+      </div>
+
+    </div>
+    <div class="box" id="selected-panel">
+      <div class="content" id="selection-area-parent">
+        <h3 class="title has-text-info">Selected objects
+        </h3>
+        <p class="subtitle is-size-7">Data from selected objects</p>
+        <p id="selection-area"></p>
+      </div>
+    </div>
+    <div class="bottom-left">
+      <a class="button is-info is-small" href="http://speckle.systems">
+        <span>Powered by Speckle</span>
+      </a>
+    </div>
+    <div class="bottom-right">
+      <a class="button is-small is-info is-rounded" href="http://speckle.guide">
+        <span class="icon">
+          <i class="fas fa-question"></i>
+        </span></a>
+    </div>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
