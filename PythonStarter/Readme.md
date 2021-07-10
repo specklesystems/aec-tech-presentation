@@ -1,14 +1,10 @@
 # AEC Tech Python Starter
 
-# Usage
-
-This is a demo script 
-
 # Prerequisites
 
-Install `specklepy`
+1. At least have `python 3.6` installed on your machine
+2. Install `specklepy`
 
-```
-pip install specklepy
-```
-
+   ```
+   pip install specklepy
+   ```
